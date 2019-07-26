@@ -22,3 +22,5 @@
 .env.test
 composer.lock
 symfony.lock
+
+.travis.php.ini
