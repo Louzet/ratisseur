@@ -24,3 +24,5 @@ composer.lock
 symfony.lock
 
 .travis.php.ini
+
+img-externes

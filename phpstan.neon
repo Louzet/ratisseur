@@ -1,0 +1,19 @@
+includes:
+    - vendor/phpstan/phpstan-phpunit/rules.neon
+    - vendor/phpstan/phpstan-symfony/extension.neon
+    - vendor/phpstan/phpstan-doctrine/extension.neon
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+parameters:
+    level: 3
+    excludes_analyse:
+        - %currentWorkingDirectory%/src/Migrations/*.php
+        - %currentWorkingDirectory%/src/Kernel.php
+
+    doctrine:
+        objectManagerLoader: bin/phpstan-object-manager.php
+
+    symfony:
+        console_application_loader: bin/console-application.php
+        # container_xml_path: %rootDir%/../../../var/cache/dev/srcDevDebugProjectContainer.xml
+        # or with Symfony 4.2+
+        container_xml_path: '%rootDir%/../../../var/cache/dev/srcApp_KernelDevDebugContainer.xml'
