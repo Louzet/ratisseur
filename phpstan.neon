@@ -1,10 +1,10 @@
 includes:
+    - vendor/phpstan/phpstan-phpunit/rules.neon
     - vendor/phpstan/phpstan-symfony/extension.neon
     - vendor/phpstan/phpstan-doctrine/extension.neon
     - vendor/phpstan/phpstan-phpunit/extension.neon
-    - vendor/phpstan/phpstan-phpunit/rules.neon
 parameters:
-    level: 7
+    level: 3
     excludes_analyse:
         - %currentWorkingDirectory%/src/Migrations/*.php
         - %currentWorkingDirectory%/src/Kernel.php
